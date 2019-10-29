@@ -1,0 +1,34 @@
+{
+    "name": "litecms/vendor",
+    "description": "Vendor package for litecms.",
+    "keywords": ["lavalite", "Vendor"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Lavalite",
+            "email": "info@lavalite.org"
+        }
+    ],
+    "require": {
+        "php": "^7.1.3"
+    },
+    "autoload": {
+        "classmap": [
+            "database/seeds"
+        ],
+        "psr-4": {
+            "Litecms\\Vendor\\": "src"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Litecms\\Vendor\\Providers\\VendorServiceProvider"
+            ],
+            "aliases": {
+                "Vendor"       : "Litecms\\Vendor\\Facades\\Vendor"
+            }
+        }
+    },
+    "minimum-stability": "dev"
+}
